@@ -1,2 +1,2 @@
 # goit-markup-hw-04
-Third homework
+ 4th homework. Decorative effects
