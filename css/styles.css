@@ -108,6 +108,7 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   position: relative;
+  transition: color 500ms ease-in-out;
 }
 
 .main-nav-link.current::after {
@@ -115,7 +116,7 @@ img {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   height: 4px;
   border-radius: 2px;
@@ -140,6 +141,7 @@ img {
 .contacts-link {
   color: #434455;
   line-height: 1.5;
+  transition: color 500ms ease-in-out;
 }
 
 .contacts-link:hover,
@@ -192,6 +194,7 @@ img {
   border-radius: 4px;
   min-width: 169px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 500ms ease-in-out;
 }
 
 .hero-button:hover,
@@ -311,6 +314,7 @@ img {
   justify-content: center;
   align-items: center;
   color: #f4f4fd;
+  transition: background-color 500ms ease-in-out;
 }
 
 .social-link:hover,
@@ -343,12 +347,17 @@ img {
 
 .portfolio-item {
   width: calc((100% - 24px * 2) / 3);
+  transition: box-shadow 500ms ease-in-out;
 }
 
 .portfolio-item:hover {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-item:hover .overlay {
+  transform: translateY(0);
 }
 
 .portfolio-item-content {
@@ -368,6 +377,25 @@ img {
 
 .portfolio-item-text {
   line-height: 1.5;
+}
+
+.portfolio-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #f4f4fd;
+  line-height: 1.5;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 500ms ease-in-out;
 }
 
 /* ------------ Footer -------------- */
